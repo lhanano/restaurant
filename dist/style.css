@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'PermanentMarker';
+    src:  url('./PermanentMarker-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    min-height: 100vh;
+    min-width: 100vh;
+    background: blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'PermanentMarker';
+    color: white;
+}
+
+#content {
+    height: 100vh;
+    width: 100%;
+}
+
+.welcome {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url('./home-background.jpg');
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: 100% 40%;
+    background-attachment: fixed;
+}
+
+.title {
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 100%;
+    font-size: 180px;
+}
+
+.s1 {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    height: 200%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 50px;
+}
+
+.s2 {
+    background: rgb(0, 0, 0);
+    color:  rgb(255, 255, 255);
+    height: 150%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    padding-bottom: 25%;
+    font-size: 50px;
+}
+
+.d {
+    position: relative;
+    background: url('./home-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.d1 {
+    position: relative;
+    background: url('./home-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    font-size: 30px;
+}
+
+.divText {
+    text-align: center;
+    width: 100vh;
+    height: 100vh;
+    margin: 0;
+}
+
+.textBorder {
+    position: absolute;
+    top: 50%;
+}
+
+.d1 .textBorder {
+
+}
+
+.s3 {
+    background:  rgb(255 247 189);
+    color: red;
+    height: 200px;
+    width: 100%; 
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 75px;
+}
+
+.menuPage {
+    background: rgb(255 247 189);
+    color: rgb(41, 41, 41);
+    height: 100%;
+    width: 100%; 
+    font-size: 20px;
+    padding-bottom: 10%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.menuText {
+
+}
+
+.menuText p {
+    text-align: left;
+    white-space: pre-wrap;
+    border: 3.5px solid  rgb(41, 41, 41);
+    padding: 25px 15px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.img1 {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: row1-start;
+    grid-row-end: 1;
+    position: relative;
+    width: 25%;
+    height: auto;
+}
+
+.img2 {
+
+    width: 25%;
+    height: auto;
+}
+
+.img3 {
+
+    width: 25%;
+    height: auto;
+}
+
+.d2 {
+    position: relative;
+}
+
+/*
+.title {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    top: 285px;
+}
+
+.button {
+    position: absolute;
+    height: 35px;
+    width: 150px;
+    font-size: 30px;
+    background-color: white;
+    color: red;
+    text-align: center;
+}
+
+.menu {
+    left: 350px;
+    bottom: 100px;
+}
+
+.contact {
+    right: 50%;
+    bottom: 100px;
+}
+
+.about {
+    bottom: 100px;
+    right: 350px;
+}
+*/
