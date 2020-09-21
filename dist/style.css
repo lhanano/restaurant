@@ -35,14 +35,19 @@ body {
     background-repeat: no-repeat;
     background-position: 100% 40%;
     background-attachment: fixed;
+    z-index: -2;
 }
 
 .title {
-    position: absolute;
+    position: fixed;
     text-align: center;
     top: 30%;
     width: 100%;
     font-size: 180px;
+    z-index: -1;
+    text-shadow:1px 1px 1px rgba(0, 51, 146, .6), 5px 5px 0px rgb(0 152 255);
+    color: rgb(255, 255, 255);
+
 }
 
 .s1 {
@@ -55,12 +60,13 @@ body {
     justify-content: center;
     margin: 0;
     font-size: 50px;
+    text-shadow: 3px 3px rgb(65, 68, 255)
 }
 
 .s2 {
     background: rgb(0, 0, 0);
     color:  rgb(255, 255, 255);
-    height: 150%;
+    height: 120%;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -68,6 +74,7 @@ body {
     margin: 0;
     padding-bottom: 25%;
     font-size: 50px;
+    text-shadow: 3px 3px #0aa011
 }
 
 .d {
@@ -77,7 +84,7 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed;
-    min-height: 100%;
+    height: 90%;
     min-width: 100%;
 }
 
@@ -90,7 +97,10 @@ body {
     background-attachment: fixed;
     min-height: 100%;
     min-width: 100%;
-    font-size: 30px;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .divText {
@@ -105,20 +115,32 @@ body {
     top: 50%;
 }
 
-.d1 .textBorder {
-
+.d1 .divText span {
+    text-shadow: 3px 3px 1px rgb(255 0 227);
 }
 
 .s3 {
-    background:  rgb(255 247 189);
-    color: red;
-    height: 200px;
+    background: rgb(0 220 255);
+    color: white;
+    text-shadow: -0.2px -0.2px 1px blue, 3px 3px 1px #0008ff;
+    height: 150px;
     width: 100%; 
     font-size: 30px;
     display: flex;
     text-align: center;
     justify-content: center;
-    padding-top: 75px;
+    align-items: center;
+}
+
+.cookingImg {
+    position: relative;
+    background: url('./images/img1.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .menuPage {
@@ -128,14 +150,12 @@ body {
     width: 100%; 
     font-size: 20px;
     padding-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
     align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.menuText {
-
+    padding: 0;
 }
 
 .menuText p {
@@ -147,62 +167,138 @@ body {
     line-height: 1.8;
 }
 
-.img1 {
-    grid-column-start: 1;
-    grid-column-end: span 1;
-    grid-row-start: row1-start;
-    grid-row-end: 1;
-    position: relative;
-    width: 25%;
-    height: auto;
-}
-
-.img2 {
-
-    width: 25%;
+.img4 {
+    width: 20%;
     height: auto;
 }
 
 .img3 {
-
-    width: 25%;
+    width: 20%;
     height: auto;
+}
+
+
+.dd {
+    position: relative;
+    background: url('./images/img5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    height: 80%;
+    min-width: 100%;
 }
 
 .d2 {
     position: relative;
+    background: url('./images/img5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/*
-.title {
-    color: white;
-    font-size: 100px;
+.d2 .divText span {
+    text-shadow: 3px 3px 1px rgb(248, 55, 55);
+}
+
+.s5 {
+    height: 350px;
+    font-size: 20px;
+    white-space: pre-wrap;
     text-align: center;
-    top: 285px;
+    background: rgb(255 247 189);
+    color: rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.7;
 }
 
-.button {
+.s5 p {
+    margin: auto;
+}
+
+/* navigation dropdown menu */
+
+.navMainDiv {
+    display: block;
+    position: fixed;
+    z-index: ;
+    height: 80px;
+    width: 100px;
+    top: 30px; 
+    right: 20px;
+    margin: 0; 
+    cursor: pointer;
+
+}
+
+.hamburger {
     position: absolute;
-    height: 35px;
-    width: 150px;
-    font-size: 30px;
-    background-color: white;
-    color: red;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    background-color: ;
+}
+
+.hamburgerLine {
+    position: relative;
+    height: 5px;
+    width: 70px;
+    margin: 8px;
+    background-color: rgb(255, 255, 255);
+}
+
+.dropDownDiv {
+    color: white;
+    position: absolute;
+    top: 13px;
+    left: 8px;
+
+}
+
+.dropDownMenu, .dropDownContact{
+    margin-bottom: 5px;
+    padding: 0px;
+    height: 21px;
+    width: 70px;
+    background-color: rgb(255 0 227);
     text-align: center;
+    text-shadow: 1px 1px 3px rgba(17, 0, 255, 0.705);
+    transform: scaleY(0);
+    transition: transform 0.2s ease-in;
+    transform-origin: top;
 }
 
-.menu {
-    left: 350px;
-    bottom: 100px;
+.dropDownDiv:hover > .dropDownMenu{
+    transform: scaleY(1);
+    transition: transform 0.2s ease-out;
+    transform-origin: top;
 }
 
-.contact {
-    right: 50%;
-    bottom: 100px;
+.dropDownDiv:hover > .dropDownContact{
+    transform: scaleY(1);
+    transition: transform 0.2s ease-out;
+    transform-origin: top;
 }
 
-.about {
-    bottom: 100px;
-    right: 350px;
+a {
+    text-decoration: none;
+    color: white;
 }
-*/
+
+.dropDownMenu:active{
+    background-color:rgb(10, 160, 17);
+}
+
+.dropDownContact:active{
+    background-color:rgb(10, 160, 17);
+}
+
